@@ -3,7 +3,7 @@ var mimext = require('./.');
 
 console.log('%s %s\n',
   mimext('.json'), mimext('js'),
-  mimext('text/coffeescript')
+  mimext(mimext('text/coffeescript'))
 );
 
 console.log('%s %s\n',
