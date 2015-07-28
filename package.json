@@ -1,7 +1,7 @@
 {
   "name": "mimext",
-  "version": "0.1.5",
-  "description": "mime to extension and the reverse map",
+  "version": "0.1.6",
+  "description": "mime type to extension and the reverse map",
   "main": "index.js",
   "scripts": {
     "test": "jshint index.js && npm run build && mocha test/index.js",

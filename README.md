@@ -38,7 +38,7 @@ _arguments_
 
 _when_
  - `input` is an object, it should have a property `extensions` with an array of the extensions for that mime type. Look at [mime-db](https://github.com/jshttp/mime-db) for more information.
- - `input` is a string, can have a dot. If has a slash it will be mapped to a mype type directly
+ - `input` is a string, can have a dot. If has a slash it will be mapped to a mime type directly
 
 _returns_
  - mime type of for the string|object given
