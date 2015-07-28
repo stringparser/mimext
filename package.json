@@ -1,0 +1,24 @@
+{
+  "name": "extname",
+  "version": "0.1.0",
+  "description": "mime to extname, extname to mime type conversion",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/index.js",
+    "build": "node build.js"
+  },
+  "keywords": [
+    "mime",
+    "type",
+    "extension",
+    "extname",
+    "conver"
+  ],
+  "author": "Javier Carrillo Milla <stringparser@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mime-db": "latest",
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  }
+}
