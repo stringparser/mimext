@@ -1,12 +1,17 @@
 {
   "name": "mimext",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "mime to extension and the reverse map",
   "main": "index.js",
   "scripts": {
     "test": "jshint index.js && npm run build && mocha test/index.js",
     "build": "node build.js",
     "publish": "npm test && git push origin master"
+  },
+  "repository": "stringparser/mimext",
+  "homepage": "https://github.com/stringparser/mimext",
+  "bugs": {
+    "url": "https://github.com/stringparser/mimext/issues"
   },
   "keywords": [
     "mime",
