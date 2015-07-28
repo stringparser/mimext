@@ -1,5 +1,5 @@
 {
-  "name": "extname",
+  "name": "mimext",
   "version": "0.1.0",
   "description": "mime to extname, extname to mime type conversion",
   "main": "index.js",
@@ -10,14 +10,19 @@
   "keywords": [
     "mime",
     "type",
+    "types",
+    "filename",
     "extension",
+    "extensions",
     "extname",
-    "conver"
+    "map"
   ],
   "author": "Javier Carrillo Milla <stringparser@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "mime-db": "latest"
+  },
   "devDependencies": {
-    "mime-db": "latest",
     "mocha": "^2.2.5",
     "should": "^7.0.2"
   }
