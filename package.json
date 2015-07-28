@@ -1,12 +1,12 @@
 {
   "name": "mimext",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "mime to extension, filename|extension to mime type maps",
   "main": "index.js",
   "scripts": {
-    "test": "jshint index.js example.js && mocha test/index.js",
+    "test": "jshint index.js && npm run build && mocha test/index.js",
     "build": "node build.js",
-    "publish": "npm run build && npm test && gp origin master && npm publish"
+    "publish": "npm test && git push origin master && npm publish"
   },
   "keywords": [
     "mime",
