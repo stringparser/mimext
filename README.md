@@ -42,7 +42,7 @@ _when_
 
 _returns_
  - mime type of for the string|object given
- - extension for the mime type given
+ - properties of the mime type given as string
 
 ### mimext properties
 
