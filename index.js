@@ -11,12 +11,12 @@ function mimext(obj){
   if(!obj){ return ; }
 
   if(/\//.test(obj)){
-    return exports.mimes[obj];
+    return mimext.mimes[obj];
   } if(/\./.test(obj)){
-    return exports.extnames[path.extname(obj).slice(1) || obj.slice(1)];
+    return mimext.extnames[path.extname(obj).slice(1) || obj.slice(1)];
   } else if(obj && obj.extensions){
-    return exports.extnames[obj.extensions[0]];
+    return mimext.extnames[obj.extensions[0]];
   }
 
-  return exports.extnames[obj];
+  return mimext.extnames[obj];
 }
