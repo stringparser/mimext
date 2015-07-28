@@ -27,7 +27,7 @@ console.log('%s %s\n',
 
 ## documentation
 
-The `module.exports` a `mimext` function
+The `module.exports` a function
 
 ### mimext
 ```js
