@@ -4,8 +4,9 @@
   "description": "mime to extension, filename|extension to mime type maps",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/index.js",
-    "build": "node build.js"
+    "test": "jshint index.js example.js && mocha test/index.js",
+    "build": "node build.js",
+    "publish": "npm run build && npm test && gp origin master && npm publish"
   },
   "keywords": [
     "mime",
@@ -23,6 +24,7 @@
     "mime-db": "latest"
   },
   "devDependencies": {
+    "jshint": "^2.8.0",
     "mocha": "^2.2.5",
     "should": "^7.0.2"
   }
