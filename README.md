@@ -2,6 +2,7 @@
 
 [documentation](#documentation) -
 [install](#install) -
+[test](#test)
 
 [![build][badge-build]][x-travis]
 
@@ -9,12 +10,66 @@
 ```js
 var mimext = require('mimext');
 
-console.log()
+console.log('%s %s\n',
+  mimext('.json'), mimext('js'),
+  mimext('text/coffeescript')
+);
+// application/json application/javascript
+//  text/coffeescript
+
+console.log('%s %s\n',
+  mimext('.md'), mimext('markdown'),
+  mimext(mimext('md'))
+);
+// text/x-markdown text/x-markdown
+//  { compressible: true, extensions: [ 'markdown', 'md', 'mkd' ] }
 ```
 
 ## documentation
 
 The `module.exports` a `mimext` function
+
+### mimext
+```js
+function mimext(string|object input)
+```
+
+_arguments_
+ - `input`, type string or object to check
+
+_when_
+ - `input` is an object, it should have a property `extensions` with an array of the extensions for that mime type. Look at [mime-db](https://github.com/jshttp/mime-db) for more information.
+ - `input` has is a string, it can have a dot
+
+_returns_
+ - mime type of for the string|object given
+ - extension for the mime type given
+
+## install
+
+With [npm][x-npm]
+
+    $ npm install mimext
+
+## test
+
+```sh
+$ npm test
+
+ext
+  ✓ should map extension (no dot) to mimeType
+  ✓ should map extension (with dot) to mimeType
+
+filenames
+  ✓ should map filename to mimeType
+
+mime
+  ✓ should map mimeType to its specs
+  ✓ should map mimeType to extensions
+
+
+5 passing (14ms)
+```
 
 ### license
 
