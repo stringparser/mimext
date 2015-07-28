@@ -10,19 +10,18 @@
 ```js
 var mimext = require('mimext');
 
-console.log('%s %s\n',
-  mimext('.json'), mimext('js'),
-  mimext('text/coffeescript')
+console.log('%s %s %s\n%j\n',
+  mimext('js'),
+  mimext('.json'),
+  mimext('file.coffee'),
+  mimext('text/coffeescript'),
+  mimext(mimext('filename.mp3'))
 );
-// application/json application/javascript
-//  text/coffeescript
-
-console.log('%s %s\n',
-  mimext('.md'), mimext('markdown'),
-  mimext(mimext('md'))
-);
-// text/x-markdown text/x-markdown
-//  { compressible: true, extensions: [ 'markdown', 'md', 'mkd' ] }
+// application/javascript application/json text/coffeescript
+// {"extensions":["coffee","litcoffee"]}
+//  { source: 'iana',
+//   compressible: false,
+//   extensions: [ 'mpga', 'mp2', 'mp2a', 'mp3', 'm2a', 'm3a' ] }
 ```
 
 ## documentation
