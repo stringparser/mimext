@@ -45,6 +45,11 @@ _returns_
  - mime type of for the string|object given
  - extension for the mime type given
 
+### mimext properties
+
+- `mimext.mimes` all mime types given by [mime-db][x-mimeDB]
+- `mimext.extnames` the inverse mapping from extension to mime type
+
 ## install
 
 With [npm][x-npm]
@@ -54,7 +59,7 @@ With [npm][x-npm]
 ## test
 
 ```sh
-$ npm test
+$ npm t
 
 ext
   ✓ should map extension (no dot) to mimeType
@@ -76,6 +81,7 @@ mime
 ![LICENSE](http://img.shields.io/npm/l/mimext.svg?style=flat-square)
 
 [x-npm]: https://npmjs.org/package/mimext
+[x-mimeDB]: https://github.com/jshttp/mime-db
 [x-travis]: https://travis-ci.org/stringparser/mimext/builds
 [badge-build]: http://img.shields.io/travis/stringparser/mimext/master.svg?style=flat-square
 [badge-version]: http://img.shields.io/npm/v/mimext.svg?style=flat-square
