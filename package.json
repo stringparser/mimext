@@ -1,6 +1,6 @@
 {
   "name": "mimext",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "mime type to extension and the reverse map",
   "main": "index.js",
   "scripts": {
